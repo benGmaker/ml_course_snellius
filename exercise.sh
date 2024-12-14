@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --job-name=snellius-intro-exercise
+#SBATCH --output=%x_%j.out    
+#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=1
+#SBATCH --gpus-per-node=1
+#SBATCH --time=10:00
+#SBATCH --partition=gpu_mig
+#SBATCH --reservation=jhs_tue2022
+
+# Load CUDA module (adjust version to match your system)
+module load 2023
+module load Python/3.11.3-GCCcore-12.3.0
+module load PyTorch/2.1.2-foss-2023a-CUDA-12.1.1
+module load torchvision/0.16.0-foss-2023a-CUDA-12.1.1
+
+# Install any needed packages
+pip install --no-cache-dir -r requirements.txt
+ 
+python gpu_pytorch_mnist.py
