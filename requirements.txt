@@ -1,3 +1,5 @@
 numpy
 pandas
 matplotlib
+torch --index-url https://download.pytorch.org/whl/cu121
+torchvision --index-url https://download.pytorch.org/whl/cu121
