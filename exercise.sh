@@ -6,7 +6,7 @@
 #SBATCH --gpus-per-node=1
 #SBATCH --time=10:00
 #SBATCH --partition=gpu_mig
-#SBATCH --reservation=jhs_tue2022
+#SBATCH --reservation=terv92681
 
 # Load CUDA module (adjust version to match your system)
 module load 2023
